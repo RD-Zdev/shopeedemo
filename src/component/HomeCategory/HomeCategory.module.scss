@@ -1,0 +1,106 @@
+.wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--text-color-white);
+  width: var(--default-layout-width);
+  height: 363px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.category-title {
+  width: 100%;
+  padding: 0 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.category-name {
+  height: 61px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  color: rgba(0, 0, 0, 0.54);
+}
+
+.category-block {
+  position: relative;
+  display: block;
+  unicode-bidi: isolate;
+  height: 302px;
+  overflow: hidden;
+}
+.category-list {
+  list-style: none;
+  display: flex;
+  align-content: flex-start;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 302px;
+}
+
+.category-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  border-right: 1px solid rgba(0, 0, 0, 0.05);
+  transition: ease-in-out 0.5s;
+  &:hover {
+    scale: 1.01;
+    box-shadow: 0 1px 12px 0 rgba(0, 0, 0, 0.12);
+    transition: ease-in-out 0.2s;
+  }
+}
+
+.category-link {
+  width: 119px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: var(--text-color-black);
+  padding: auto 0;
+}
+
+.item-pic {
+  margin-top: 25px;
+  width: 83.3px;
+  height: 83.3px;
+}
+
+.item-title {
+  text-align: center;
+  unicode-bidi: isolate;
+  font-size: 14px;
+}
+
+.category-btn-right {
+  position: absolute;
+  right: -15px;
+  height: 30px;
+  top: 211px;
+  width: 30px;
+  transform: translateY(-15px);
+  border-radius: 50%;
+  border: none;
+  background-color: var(--text-color-white);
+  cursor: pointer;
+  box-shadow: 0 1px 12px 0 rgba(0, 0, 0, 0.12);
+}
+
+.category-btn-left {
+  position: absolute;
+  left: -15px;
+  height: 30px;
+  top: 211px;
+  width: 30px;
+  transform: translateY(-15px);
+  border-radius: 50%;
+  border: none;
+  background-color: var(--text-color-white);
+  cursor: pointer;
+  box-shadow: 0 1px 12px 0 rgba(0, 0, 0, 0.12);
+}
