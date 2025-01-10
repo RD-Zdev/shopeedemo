@@ -2,6 +2,8 @@ import Header from "./component/Header";
 import Banner from "./component/Banner";
 import HomeCategory from "./component/HomeCategory";
 import FlashSale from "./component/FlashSale/FlashSale";
+import SimpleBanner from "./component/SimpleBanner";
+import BannerMall from "./component/BannerMall/BannerMall";
 
 function App() {
   return (
@@ -10,6 +12,8 @@ function App() {
       <Banner />
       <HomeCategory />
       <FlashSale />
+      <SimpleBanner />
+      <BannerMall />
     </div>
   );
 }

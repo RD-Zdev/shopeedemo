@@ -104,22 +104,37 @@ const FLASH_SALE = [
 ];
 
 function FlashSale() {
-  const [flashsaleBtn, setFlashsaleBtn] = useState(false);
+  const [flashsaleBtn, setFlashsaleBtn] = useState(0);
+  const [valueMove, setValueMove] = useState(0);
 
-  const handleClick = () => {
-    setFlashsaleBtn(!flashsaleBtn);
-    const catelist = cx("flashsale-item");
-    const list = document.querySelectorAll(`.${catelist}`);
-    console.log(list);
-    list.forEach((item) => {
-      item.style.transform = `translateX(${flashsaleBtn ? 0 : "-600px"})`;
+  function handlePrev() {
+    setFlashsaleBtn(flashsaleBtn - 1);
+    setValueMove((Prev) => {
+      const abc = Prev + 1000;
+      const itemlist = cx("flashsale-list");
+      const list = document.querySelector(`.${itemlist}`);
+      list.style.transform = `translateX(${abc}px)`;
+      return abc;
     });
-  };
+  }
+
+  function handleNext() {
+    setFlashsaleBtn(flashsaleBtn + 1);
+    setValueMove((Prev) => {
+      const abc = Prev - 1000;
+      const itemlist = cx("flashsale-list");
+      const list = document.querySelector(`.${itemlist}`);
+      list.style.transform = `translateX(${abc}px)`;
+      return abc;
+    });
+  }
   return (
     <div className={cx("wrapper")}>
       <div className={cx("flashsale-title")}>
         <div className={cx("flashsale-name")}>FLASHSALE</div>
-        <div className={cx("flashsale-btn")}>Xem tất cả</div>
+        <div className={cx("flashsale-btn")}>
+          Xem tất cả <ArrowRight className={cx('title-btn')} />
+        </div>
       </div>
       <div className="wrapper-listitem">
         <div className={cx("flashsale-block")}>
@@ -140,23 +155,42 @@ function FlashSale() {
             ))}
           </ul>
         </div>
-        {flashsaleBtn ? (
-          <button
-            className={cx("flashsale-btn-left")}
-            onClick={() => {
-              handleClick();
-            }}
-          >
-            <ArrowLeft />
-          </button>
-        ) : (
+        {flashsaleBtn === 0 ? (
           <button
             className={cx("flashsale-btn-right")}
             onClick={() => {
-              handleClick();
+              handleNext();
             }}
           >
             <ArrowRight />
+          </button>
+        ) : flashsaleBtn === 1 ? (
+          <>
+            <button
+              className={cx("flashsale-btn-left")}
+              onClick={() => {
+                handlePrev();
+              }}
+            >
+              <ArrowLeft />
+            </button>
+            <button
+              className={cx("flashsale-btn-right")}
+              onClick={() => {
+                handleNext();
+              }}
+            >
+              <ArrowRight />
+            </button>
+          </>
+        ) : (
+          <button
+            className={cx("flashsale-btn-left")}
+            onClick={() => {
+              handlePrev();
+            }}
+          >
+            <ArrowLeft />
           </button>
         )}
       </div>

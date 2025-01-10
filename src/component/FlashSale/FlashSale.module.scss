@@ -22,9 +22,23 @@
 .flashsale-name {
   height: 61px;
   display: flex;
+  font-weight: 600;
   align-items: center;
   justify-content: start;
   color: rgba(0, 0, 0, 0.54);
+}
+
+.flashsale-btn {
+  display: flex;
+  align-items: center;
+  color: red;
+  cursor: pointer;
+}
+
+.title-btn {
+  width: 10px;
+  height: 10px;
+  color: red;
 }
 
 .flashsale-block {
