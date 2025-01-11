@@ -54,6 +54,9 @@
 }
 
 .header-item-title {
+  color: #666;
+  font-size: 1.4rem;
+  font-weight: 500;
 }
 
 .header-btn {
@@ -86,11 +89,12 @@
 
 .content-banner-img {
   width: 400px;
-  height: auto;
+  height: 472px;
   padding: 10px;
 }
 
 .content-banner {
+  align-items: center;
 }
 
 .content-banner-title {
@@ -98,7 +102,6 @@
 }
 
 .bannersale-block {
-  overflow: hidden;
   width: 800px;
   height: 514px;
 }
@@ -150,39 +153,6 @@
   }
 }
 
-.arrow-btn {
-  width: 20px;
-  height: 20px;
-}
 
-.btn-left {
-  width: 30px;
-  height: 30px;
-  position: absolute;
-  left: -15px;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 1.4rem;
-  background-color: var(--text-color-white);
-  padding: 1px 2px;
-  border: none;
-  border-radius: 50%;
-  box-shadow: 0 1px 12px 0 rgba(0, 0, 0, 0.12);
-  cursor: pointer;
-}
 
-.btn-right {
-  width: 30px;
-  height: 30px;
-  position: absolute;
-  right: -15px;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 1.4rem;
-  background-color: var(--text-color-white);
-  padding: 1px 2px;
-  border: none;
-  border-radius: 50%;
-  box-shadow: 0 1px 12px 0 rgba(0, 0, 0, 0.12);
-  cursor: pointer;
-}
+

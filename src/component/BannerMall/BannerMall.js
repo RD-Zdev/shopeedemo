@@ -1,8 +1,8 @@
 import classNames from "classnames/bind";
-import { useState } from "react";
 
 import styles from "./BannerMall.module.scss";
-import { ArrowRight, ArrowLeft } from "../Icons/icon";
+import { ArrowRight } from "../Icons/icon";
+import BtnRightLeft from "../BtnRightLeft/BtnRightLeft";
 
 const cx = classNames.bind(styles);
 
@@ -86,15 +86,6 @@ const productsMall = [
   },
 ];
 function BannerMall() {
-  const [bannersaleBtn, setBannerSaleBtn] = useState(false);
-
-  const handleClick = () => {
-    setBannerSaleBtn(!bannersaleBtn);
-    const classList = cx("bannersale-list");
-    const bannerlist = document.querySelector(`.${classList}`);
-    bannerlist.style.transform = `translateX(${bannersaleBtn ? 0 : "-800px"})`;
-  };
-
   return (
     <div className={cx("wrapper")}>
       <div className={cx("header")}>
@@ -128,54 +119,35 @@ function BannerMall() {
         />
         <div className={cx("content-banner")}>
           <div className={cx("content-banner-title")}>
-            {/* ------------------------------------ */}
             <div className="wrapper-listitem">
-              <div className={cx("bannersale-block")}>
-                <ul className={cx("bannersale-list")}>
-                  {productsMall.map((item, index) => (
-                    <li key={index} className={cx("bannersale-item")}>
-                      <a
-                        className={cx("bannersale-link")}
-                        href="http://google.vn"
-                      >
-                        <img
-                          className={cx("item-pic")}
-                          src={item.src}
-                          alt={item.title}
-                        />
-                        <div className={cx("item-title")}>{item.title}</div>
-                      </a>
+              <BtnRightLeft moveValue={800} timesMove={1}>
+                <div className={cx("bannersale-block")}>
+                  <ul className={cx("bannersale-list")}>
+                    {productsMall.map((item, index) => (
+                      <li key={index} className={cx("bannersale-item")}>
+                        <a
+                          className={cx("bannersale-link")}
+                          href="http://google.vn"
+                        >
+                          <img
+                            className={cx("item-pic")}
+                            src={item.src}
+                            alt={item.title}
+                          />
+                          <div className={cx("item-title")}>{item.title}</div>
+                        </a>
+                      </li>
+                    ))}
+                    <li className={cx("list-btn")}>
+                      Xem tất cả
+                      <span className={cx("wrapper-btn")}>
+                        <ArrowRight className={cx("header-btn-icon")} />
+                      </span>
                     </li>
-                  ))}
-                  <li className={cx("list-btn")}>
-                    Xem tất cả
-                    <span className={cx("wrapper-btn")}>
-                      <ArrowRight className={cx("header-btn-icon")} />
-                    </span>
-                  </li>
-                </ul>
-              </div>
-              {bannersaleBtn ? (
-                <button
-                  className={cx("btn-left")}
-                  onClick={() => {
-                    handleClick();
-                  }}
-                >
-                  <ArrowLeft className={cx("arrow-btn")} />
-                </button>
-              ) : (
-                <button
-                  className={cx("btn-right")}
-                  onClick={() => {
-                    handleClick();
-                  }}
-                >
-                  <ArrowRight className={cx("arrow-btn")} />
-                </button>
-              )}
+                  </ul>
+                </div>
+              </BtnRightLeft>
             </div>
-            {/* ------------------------------------ */}
           </div>
         </div>
       </div>

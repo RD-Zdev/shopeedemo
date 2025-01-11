@@ -1,0 +1,101 @@
+.wrapper {
+  width: var(--default-layout-width);
+  margin: 0 auto;
+  margin-top: 20px;
+}
+.header {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--text-color-white);
+  height: 60px;
+  color: #ee4d2d;
+  border-bottom: 5px solid #ee4d2d;
+}
+.list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  background-color: #f5f5f5;
+}
+.wrapper-item {
+  width: 200px;
+  height: 308px;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #fff;
+  cursor: pointer;
+
+  & img {
+    width: 188px;
+    height: 188px;
+    background-color: #f1f1f1f1;
+  }
+}
+.title-item {
+  font-size: 1.4rem;
+  height: 40px;
+  display: -webkit-box; /* Sử dụng kết hợp với -webkit-line-clamp */
+  -webkit-line-clamp: 2; /* Số lượng dòng muốn hiển thị */
+  -webkit-box-orient: vertical;
+  overflow: hidden; /* Ẩn nội dung tràn */
+  text-overflow: ellipsis; /* Thêm dấu chấm lửng (...) */
+
+  & .favorite-item {
+    background-color: #ee4d2d;
+    color: #ffffff;
+    font-size: 1.2rem;
+    padding: 3px 3px;
+    border-radius: 5px;
+    font-weight: thin;
+    margin-right: 5px;
+  }
+}
+
+.info-item {
+  font-size: 1.2rem;
+  height: 20px;
+  display: flex;
+  justify-content: flex-start;
+}
+.bestseller-item {
+  background-color: #f9c23c;
+  color: #ffffff;
+  font-size: 1.2rem;
+  padding: 1px 3px;
+  border-radius: 5px;
+  font-weight: thin;
+  margin-right: 5px;
+}
+.cashback-item {
+  background-color: #f43f5e;
+  color: #ffffff;
+  font-size: 1.2rem;
+  padding: 1px 3px;
+  border-radius: 5px;
+  font-weight: thin;
+  margin-right: 5px;
+}
+.price-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.4rem;
+}
+.VND {
+  font-size: 1.2rem;
+  color: #ca2a0a;
+  font-weight: bold;
+}
+.price {
+  font-size: 1.6rem;
+  color: #ee4d2d;
+}
+.sold-item {
+  font-size: 1.2rem;
+}

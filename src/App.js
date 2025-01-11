@@ -3,7 +3,9 @@ import Banner from "./component/Banner";
 import HomeCategory from "./component/HomeCategory";
 import FlashSale from "./component/FlashSale/FlashSale";
 import SimpleBanner from "./component/SimpleBanner";
-import BannerMall from "./component/BannerMall/BannerMall";
+import BannerMall from "./component/BannerMall";
+import TopSearch from "./component/TopSearch/TopSearch";
+import ListRemark from "./component/ListRemark/ListRemark";
 
 function App() {
   return (
@@ -14,6 +16,8 @@ function App() {
       <FlashSale />
       <SimpleBanner />
       <BannerMall />
+      <TopSearch />
+      <ListRemark />
     </div>
   );
 }
