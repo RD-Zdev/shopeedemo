@@ -1,4 +1,5 @@
 import classNames from "classnames/bind";
+import { useState } from "react";
 
 import styles from "./ListRemark.module.scss";
 
@@ -369,11 +370,16 @@ const products = [
 ];
 
 function ListRemark() {
+  const [countShow, setCountShow] = useState(6);
+
+  const handleShowMore = () => {
+    setCountShow((prevCount) => prevCount + 6);
+  };
   return (
     <div className={cx("wrapper")}>
       <div className={cx("header")}>GỢI Ý HÔM NAY</div>
       <ul className={cx("list")}>
-        {products.map((item, index) => (
+        {products.slice(0, countShow).map((item, index) => (
           <li key={index} className={cx("wrapper-item")}>
             <img src={item.image} alt="" />
             <div className={cx("title-item")}>
@@ -400,6 +406,11 @@ function ListRemark() {
           </li>
         ))}
       </ul>
+      {countShow < products.length && (
+        <div onClick={handleShowMore} className={cx("showmore-btn")}>
+          Xem thêm
+        </div>
+      )}
     </div>
   );
 }

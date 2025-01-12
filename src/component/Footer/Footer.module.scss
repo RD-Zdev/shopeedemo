@@ -1,0 +1,143 @@
+p,
+li {
+  font-size: 1.2rem;
+  color: rgba(0, 0, 0, 0.54);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 20px 0;
+}
+.wrapper {
+  border-top: 5px solid #ee4d2d;
+  background-color: #fff;
+}
+.footer-info {
+  width: var(--default-layout-width);
+  margin: 0 auto;
+  padding: 20px 0;
+  margin-top: 60px;
+}
+.ul-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+
+  & li {
+    &::after {
+      content: "|";
+      margin: 0px 3px;
+    }
+  }
+
+  & a {
+    color: #333;
+    text-decoration: none;
+    &:hover {
+      color: #ee4d2d;
+    }
+  }
+}
+
+.wrapper-link {
+  display: flex;
+}
+.wrapper-link2 {
+  width: 240px;
+  display: flex;
+  flex-direction: column;
+}
+.wrapper-link3 {
+  width: 240px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.title-link {
+  font-size: 1.4rem;
+  font-weight: 700;
+  & a {
+    color: rgba(0, 0, 0, 0.54);
+
+    text-decoration: none;
+    &:hover {
+      color: #ee4d2d;
+    }
+  }
+}
+
+.list-link {
+  font-size: 1.2rem;
+  display: flex;
+  flex-wrap: wrap;
+  & a {
+    color: rgba(0, 0, 0, 0.54);
+    text-decoration: none;
+    &:hover {
+      color: #ee4d2d;
+    }
+  }
+}
+
+.footer-coppyright {
+  margin-top: 30px;
+}
+.wrapper-coppyright {
+  display: flex;
+  height: 400px;
+}
+.coppyright-top {
+  width: 240px;
+  & a {
+    color: rgba(0, 0, 0, 0.54);
+    text-decoration: none;
+    &:hover {
+      color: #ee4d2d;
+    }
+  }
+}
+.coppyright-top-list {
+  list-style: none;
+  flex-direction: column;
+}
+
+.coppyright-top-list1 {
+  margin-bottom: 50px;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+
+  & img {
+    height: 30px;
+    width: 60px;
+    padding: 4px;
+    margin: 5px;
+  }
+}
+
+.coppyright-bottom {
+  display: flex;
+  justify-content: space-between;
+  color: rgba(0, 0, 0, 0.54);
+  font-size: 1.4rem;
+}
+
+.coppyright-bottom-list {
+  display: flex;
+  justify-content: end;
+  & a {
+    color: rgba(0, 0, 0, 0.54);
+    text-decoration: none;
+    &:hover {
+      color: #ee4d2d;
+    }
+    &::after {
+      content: "|";
+      margin: 0px 5px;
+    }
+  }
+}

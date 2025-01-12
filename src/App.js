@@ -6,6 +6,7 @@ import SimpleBanner from "./component/SimpleBanner";
 import BannerMall from "./component/BannerMall";
 import TopSearch from "./component/TopSearch/TopSearch";
 import ListRemark from "./component/ListRemark/ListRemark";
+import Footer from "./component/Footer/Footer";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <BannerMall />
       <TopSearch />
       <ListRemark />
+      <Footer />
     </div>
   );
 }
