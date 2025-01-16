@@ -7,6 +7,7 @@ import BannerMall from "./component/BannerMall";
 import TopSearch from "./component/TopSearch/TopSearch";
 import ListRemark from "./component/ListRemark/ListRemark";
 import Footer from "./component/Footer/Footer";
+import FooterDown from "./component/FooterDown/FooterDown";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       <TopSearch />
       <ListRemark />
       <Footer />
+      <FooterDown />
     </div>
   );
 }
